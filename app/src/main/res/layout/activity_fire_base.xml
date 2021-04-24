@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FireBaseList">
+
+    <ImageView
+        android:id="@+id/img_fb"
+        android:layout_width="171dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="67dp"
+        android:src="@drawable/firebaselogo"
+        app:layout_constraintBottom_toTopOf="@+id/input_fb_fname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_fb_uid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/input_fb_phone"
+        app:layout_constraintEnd_toEndOf="@+id/input_fb_lname"
+        app:layout_constraintTop_toBottomOf="@+id/input_fb_lname" />
+
+    <EditText
+        android:id="@+id/input_fb_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/input_fb_email"
+        app:layout_constraintStart_toStartOf="@+id/input_fb_uid"
+        app:layout_constraintTop_toBottomOf="@+id/input_fb_uid" />
+
+    <EditText
+        android:id="@+id/input_fb_lname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/input_fb_uid"
+        app:layout_constraintStart_toStartOf="@+id/input_fb_fname"
+        app:layout_constraintTop_toBottomOf="@+id/input_fb_fname" />
+
+    <EditText
+        android:id="@+id/input_fb_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/button_firebase_insert"
+        app:layout_constraintStart_toStartOf="@+id/input_fb_phone"
+        app:layout_constraintTop_toBottomOf="@+id/input_fb_phone" />
+
+    <EditText
+        android:id="@+id/input_fb_fname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/input_fb_lname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_fb" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:layout_weight="1"
+        android:text="Delete"
+        app:backgroundTint="#FFC107"
+        app:layout_constraintBottom_toTopOf="@+id/btn_go_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_firebase_update" />
+
+    <Button
+        android:id="@+id/btn_go_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="83dp"
+        android:text="Select options"
+        app:backgroundTint="#FFC107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_firebase_insert"
+        app:layout_constraintTop_toBottomOf="@+id/button_firebase_insert" />
+
+    <Button
+        android:id="@+id/button_firebase_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="14dp"
+        android:layout_weight="1"
+        android:text="Insert"
+        app:backgroundTint="#FFC107"
+        app:layout_constraintBottom_toTopOf="@+id/btn_go_select"
+        app:layout_constraintEnd_toStartOf="@+id/button_firebase_update"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_fb_email" />
+
+    <Button
+        android:id="@+id/button_firebase_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_weight="1"
+        android:text="Update"
+        app:backgroundTint="#FFC107"
+        app:layout_constraintBottom_toTopOf="@+id/btn_go_select"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delete"
+        app:layout_constraintStart_toEndOf="@+id/button_firebase_insert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
